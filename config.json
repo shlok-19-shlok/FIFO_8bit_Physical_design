@@ -1,0 +1,53 @@
+{
+    "DESIGN_NAME": "fifo",
+    "VERILOG_FILES": "dir::fifo.v",
+    "CLOCK_PERIOD": 10.0,
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "ref::$CLOCK_PORT",
+    "SYNTH_CAP_LOAD": 33.45,
+    "FP_PDN_LOWER_LAYER": "met4",
+    "FP_PDN_UPPER_LAYER": "met5",
+    "FP_PDN_RAILS_LAYER": "met1",
+    "FP_PDN_VOFFSET": 7,
+    "FP_PDN_HOFFSET": 7,
+    "FP_PDN_SKIPTRIM": true,
+    "PL_TARGET_DENSITY": 0.45,
+    "FP_CORE_UTIL": 35,
+
+    "GPL_CELL_PADDING": 2,
+    "DPL_CELL_PADDING": 2,
+    "GRT_ALLOW_CONGESTION": false,
+    "RT_MAX_LAYER": "met4",
+    "FP_SIZING": "relative",
+    "QUIT_ON_LONG_WIRE": false,
+    "QUIT_ON_MAGIC_DRC": false,
+    "QUIT_ON_LVS_ERROR": false,
+    "QUIT_ON_ILLEGAL_OVERLAPS": false,
+    
+
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 30,
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "MAX_FANOUT_CONSTRAINT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcu*": {
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "MAX_FANOUT_CONSTRAINT": 4,
+        "PL_TARGET_DENSITY": 0.45
+    }
+}
